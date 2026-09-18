@@ -41,9 +41,9 @@ class DocsMain extends Component {
       const idBottom = find.getBoundingClientRect().bottom;
 
       if (idTop - top <= 10 && idBottom - top >= 0) {
-        navId.className = 'active';
+        navId.className = pageStyles.active;
       } else {
-        navId.classList.remove('active');
+        navId.classList.remove(pageStyles.active);
       }
     }
   };
