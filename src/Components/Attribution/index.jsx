@@ -9,7 +9,7 @@ const Attribution = () => (
       from work by{' '}
       <a href="https://github.com/timbiles/Breaking-Bad--API" target="_blank" rel="noreferrer">Tim Biles</a>{' '}
       with data via{' '}
-      <a href="https://github.com/chewhx/breaking-bad/tree/main/_data/dump" target="_blank" rel="noreferrer">Ahmad Swalih</a>.
+      <a href="https://github.com/chewhx/breaking-bad/tree/main/_data/dump" target="_blank" rel="noreferrer">Chew Han Xiang</a>.
     </p>
   </header>
 );

@@ -60,13 +60,28 @@ const Home = () => {
     <article className={styles.deathInfo}>
       <div className={styles.deathVisual}>
         <h2>{rd.death}</h2>
-        {rd.img ? (
-          <img src={rd.img} alt={rd.death} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
-        ) : (
-          <div className={styles.deathImagePlaceholder} aria-label={`No image available for ${rd.death}`}>
-            {rd.death?.charAt(0) || '?'}
-          </div>
-        )}
+        {(() => {
+          const image = rd.character?.img || rd.character?.image_url || rd.img;
+          return image ? (
+            <>
+              <img
+                src={image}
+                alt={rd.character?.name || rd.death}
+                onError={(event) => {
+                  event.currentTarget.hidden = true;
+                  event.currentTarget.nextElementSibling.hidden = false;
+                }}
+              />
+              <div className={styles.deathImagePlaceholder} hidden aria-label={`No image available for ${rd.death}`}>
+                {rd.death?.charAt(0) || '?'}
+              </div>
+            </>
+          ) : (
+            <div className={styles.deathImagePlaceholder} aria-label={`No image available for ${rd.death}`}>
+              {rd.death?.charAt(0) || '?'}
+            </div>
+          );
+        })()}
       </div>
       <div className={styles.deathDetails}>
         <h4>Cause of death:</h4>

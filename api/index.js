@@ -38,7 +38,7 @@ const characterForDeath = (death, allCharacters) => {
 };
 const deathsWithCharacterData = (allCharacters) => deaths().map((death) => {
   const character = characterForDeath(death, allCharacters);
-  return { ...death, img: character?.image_url || null, character: character || null };
+  return { ...death, img: character?.img || character?.image_url || null, character: character || null };
 });
 const random = (items, count = 1) => [...items].sort(() => Math.random() - 0.5).slice(0, Math.max(Number.parseInt(count, 10) || 1, 1));
 const getPath = (req) => new URL(req.url || '/', 'http://localhost').pathname.replace(/^\/api\/?/, '').replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
