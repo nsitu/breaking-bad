@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/global.css';
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
