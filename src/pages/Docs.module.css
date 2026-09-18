@@ -54,10 +54,18 @@
 :global(.example) { padding: 1%; margin-left: 2%; background: #fff; color: #000; }
 .code { width: auto !important; }
 .offset { margin-left: 50px; }
-.schema { width: 100%; }
-.schema > div { display: flex; margin-left: 20px; width: calc(100% - 20px); }
-.schema > div > p:nth-of-type(1), .schema > div > p:nth-of-type(2) { width: 120px; }
-.schema > div:nth-of-type(1) { border-bottom: 1px solid #ececec; }
+:global(.schema) { width: 100%; }
+:global(.schema > div) {
+	display: grid;
+	grid-template-columns: 135px 135px minmax(0, 1fr);
+	align-items: start;
+	gap: 0;
+	margin-left: 20px;
+	width: calc(100% - 20px);
+}
+:global(.schema > div > p) { margin: 0; padding: 10px 0; }
+:global(.schema > div:nth-of-type(1)) { border-bottom: 1px solid #ececec; }
+:global(.schema > div:nth-of-type(1) > p) { font-weight: 500; }
 .schemaLong { font-size: .85em; margin-top: 16px; display: flex; align-items: center; }
 #doc_mark {
 	color: rgb(72, 127, 90);
@@ -69,4 +77,5 @@
 	.documentation { flex-direction: column; }
 	.navbar { flex: 0 0 auto; width: 100%; height: auto; max-height: 35vh; }
 	.docsMain { width: 100%; height: auto; min-height: 65vh; }
+	:global(.schema > div) { grid-template-columns: 90px 90px minmax(0, 1fr); margin-left: 0; width: 100%; }
 }
