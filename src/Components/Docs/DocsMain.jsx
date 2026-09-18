@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component, createRef } from 'react';
 import styles from './DocsMain.module.css';
 import {
   characterExample,
@@ -11,17 +10,18 @@ import {
 import navigation from '../../data/navigation.json';
 
 class DocsMain extends Component {
+  holderRef = createRef();
+
   componentDidMount() {
     if (navigation.length > 0) {
       this.changeClass();
-      const holder = ReactDOM.findDOMNode(this.refs.holder);
+      const holder = this.holderRef.current;
       holder.addEventListener('scroll', this.changeClass);
     }
   }
 
   componentWillUnmount() {
-    const holder = ReactDOM.findDOMNode(this.refs.holder);
-    holder.removeEventListener('scroll', this.changeClass);
+    this.holderRef.current?.removeEventListener('scroll', this.changeClass);
   }
 
   changeClass = () => {
@@ -29,14 +29,15 @@ class DocsMain extends Component {
   };
 
   highlight = (nav) => {
-    const header = document.querySelector('.header'),
-      top = header.getBoundingClientRect().height;
+    const header = document.querySelector('[role="navigation"]');
+    const top = header?.getBoundingClientRect().height || 0;
 
     for (let i = 0; i < nav.length; i++) {
-      const find = document.getElementById(nav[i].id),
-        idTop = find.getBoundingClientRect().top,
-        idBottom = find.getBoundingClientRect().bottom,
-        navId = document.getElementById(`${nav[i].id}b`);
+      const find = document.getElementById(nav[i].id);
+      const navId = document.getElementById(`${nav[i].id}b`);
+      if (!find || !navId) continue;
+      const idTop = find.getBoundingClientRect().top;
+      const idBottom = find.getBoundingClientRect().bottom;
 
       if (idTop - top <= 10 && idBottom - top >= 0) {
         navId.className = 'active';
@@ -54,7 +55,7 @@ class DocsMain extends Component {
       textDecoration: 'underline',
     };
     return (
-      <div ref="holder" className="docs_main">
+      <div ref={this.holderRef} className="docsMain">
         <div id="doc">
           <h3>
             Document
