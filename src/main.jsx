@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
 import Nav from './Components/Nav';
+import Attribution from './Components/Attribution';
 import Footer from './Components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -22,6 +23,7 @@ const routes = (
 const App = () => (
 	<Router>
 		<Fragment>
+			<Attribution />
 			<Nav />
 			{routes}
 			<Footer />
