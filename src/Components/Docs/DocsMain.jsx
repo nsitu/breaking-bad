@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react';
 import styles from './DocsMain.module.css';
+import '../../pages/Docs.module.css';
 import {
   characterExample,
   multipleCharacterExample,
