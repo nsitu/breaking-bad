@@ -56,6 +56,7 @@
 	font-weight: 700;
 	text-shadow: 2px 2px #000;
 }
+.deathImagePlaceholder[hidden] { display: none !important; }
 .deathDetails h4 { margin: 0 0 4px; color: #396447; }
 .deathDetails p { margin: 0 0 16px; line-height: 1.5; }
 @media (max-width: 680px) {
