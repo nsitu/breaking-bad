@@ -88,7 +88,7 @@ class DocsMain extends Component {
         </div>
         <div id="base">
           <h4>Base Url</h4>
-          <p className="example">https://www.breakingbadapi.com/api/</p>
+          <p className="example">https://ixd-breaking-bad.vercel.app/api/</p>
         </div>
         <div>
           <h3 id="char">Character Endpoints</h3>

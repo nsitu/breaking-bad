@@ -77,7 +77,7 @@ const Playground = () => {
         Use the categories below as a starting point.
       </h4>
       <div className={styles.searchBar}>
-        <p>https://www.breakingbadapi.com/api/</p>
+        <p>https://ixd-breaking-bad.vercel.app/api/</p>
         <input className={styles.searchInput}
           type="text"
           onChange={updateSearch}
