@@ -1,5 +1,7 @@
 # Breaking Bad API
 
+> This API was adapted by [Harold Sikkema](https://github.com/nsitu/breaking-bad) from work by [Tim Biles](https://github.com/timbiles/Breaking-Bad--API) with data via [Chew Han Xiang](https://github.com/chewhx/breaking-bad/tree/main/_data/dump).
+
 ## Documentation
 
 Welcome to the Breaking Bad API! This documentation will supply
