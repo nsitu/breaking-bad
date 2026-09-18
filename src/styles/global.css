@@ -12,6 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+mark {
+  color: rgb(72, 127, 90);
+  background: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) 1px 1px;
+}
+
 *::selection {
   background: #79b473;
 }

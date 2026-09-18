@@ -109,7 +109,7 @@ const Home = () => {
         />
       </section>
 
-      <div className="character_map">{charMap}</div>
+      <div className={styles.characterMap}>{charMap}</div>
       <div className="test_api">
         <div className="death_map">
           <div>

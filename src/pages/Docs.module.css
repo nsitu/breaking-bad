@@ -43,18 +43,15 @@
 }
 
 .docsMain div { width: 100%; }
-.docsMain h4, .docsMain h3 { font-weight: bold; letter-spacing: 2px; text-align: left; padding-top: 10px; }
+.docsMain h3 { font-size: 1.5em; border-bottom: 1px solid grey; padding-bottom: 1%; }
+.docsMain h3, .docsMain h4 { font-weight: 700; letter-spacing: 2px; text-align: left; padding-top: 10px; }
 .docsMain h4 { color: #a0a0a0; font-size: 1.2em; }
 .docsMain h3 {
-	font-size: 1.5em;
-	letter-spacing: 2px;
 	width: 100%;
 	color: #396447;
-	border-bottom: 1px solid #c9c9c9;
-	padding-bottom: 1%;
 }
 .docsMain p { text-align: left; }
-.example { padding: 1%; margin-left: 2%; background: #fff; color: #000; }
+:global(.example) { padding: 1%; margin-left: 2%; background: #fff; color: #000; }
 .code { width: auto !important; }
 .offset { margin-left: 50px; }
 .schema { width: 100%; }
@@ -62,7 +59,11 @@
 .schema > div > p:nth-of-type(1), .schema > div > p:nth-of-type(2) { width: 120px; }
 .schema > div:nth-of-type(1) { border-bottom: 1px solid #ececec; }
 .schemaLong { font-size: .85em; margin-top: 16px; display: flex; align-items: center; }
-#doc_mark { background: inherit; }
+#doc_mark {
+	color: rgb(72, 127, 90);
+	background: rgb(255, 255, 255);
+	text-shadow: rgb(0, 0, 0) 1px 1px;
+}
 
 @media (max-width: 700px) {
 	.documentation { flex-direction: column; }

@@ -1,5 +1,7 @@
 .home { text-align: center; }
 .container { background: #fff; display: inline-block; margin-bottom: 30px; }
+.characterMap, .quoteMap { background: #3b3b3b; display: flex; }
+.characterMap { justify-content: space-evenly; flex-wrap: wrap; }
 .homeHeader { margin: 0; font-weight: 700; font-size: 56px; }
 .homeHeader mark { color: #487f5a; background: #fff; text-shadow: 1px 1px #000; }
 .subText { margin: 0; font-size: 16px; letter-spacing: 2px; text-align: right; }
@@ -13,4 +15,21 @@
 .primaryIcon { margin-bottom: 3px; border-bottom: 2px inset rgb(121 180 115 / 40%); }
 .icon:first-child { padding-bottom: 5px; }
 .button { border: 0; border-radius: 4px; padding: 8px 16px; font: inherit; cursor: pointer; background: #79b473; color: #fff; }
+:global(.test_api) > div { display: flex; justify-content: center; align-items: center; }
+:global(.death_map) > div:first-of-type { display: flex; align-items: center; }
+:global(.death_map) h3 { letter-spacing: 3px; }
+:global(.death_map) button {
+	margin-left: 20px;
+	font-size: .9em;
+	letter-spacing: 1.5px;
+	background: transparent;
+	border-radius: 5%;
+	color: rgba(0, 0, 0, .87);
+	box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 1px 5px rgba(0, 0, 0, .12);
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: 500;
+	line-height: 1.75;
+	text-transform: uppercase;
+	transition: background-color 250ms cubic-bezier(.4, 0, .2, 1), box-shadow 250ms cubic-bezier(.4, 0, .2, 1);
+}
 @media (max-width: 680px) { .homeHeader { font-size: 32px; } .subText { font-size: 14px; } }

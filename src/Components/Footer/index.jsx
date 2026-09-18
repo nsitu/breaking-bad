@@ -18,7 +18,7 @@ class Footer extends Component {
   }
 
   getChar() {
-    axios.get('/api/footer-char-info').then(res => {
+    axios.get('/api/characters').then(res => {
       this.setState({ totalChar: res.data });
     });
   }

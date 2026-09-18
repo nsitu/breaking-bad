@@ -1,1 +1,5 @@
-.highlight { background: inherit; }
+.highlight {
+	color: rgb(72, 127, 90);
+	background: rgb(255, 255, 255);
+	text-shadow: rgb(0, 0, 0) 1px 1px;
+}
