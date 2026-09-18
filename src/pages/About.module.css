@@ -1,0 +1,11 @@
+.container { display: flex; flex-direction: column; align-items: flex-start; }
+.primary { align-items: center; }
+.secondary { width: 60%; text-align: left; }
+.title { letter-spacing: 2px; }
+.secondaryTitle { width: 100%; color: #396447; padding-bottom: 1%; border-bottom: 1px solid #c9c9c9; }
+.text { }
+.link { color: #396447; text-decoration: none; }
+.link:hover { text-decoration: underline; opacity: .7; transform: scale(1.02); }
+.list { margin-left: 60px; font-size: .9em; }
+@media (max-width: 900px) { .secondary { width: 90%; } }
+@media (max-width: 500px) { .text, .list { font-size: .8em; } }

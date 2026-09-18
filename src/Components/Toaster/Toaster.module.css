@@ -1,0 +1,2 @@
+.container { position: absolute; left: 0; right: 0; margin: auto; margin-top: calc(40px + 6%); background: rgb(174 174 174 / 99%); z-index: 999; width: 80vw; }
+.content { display: flex; }

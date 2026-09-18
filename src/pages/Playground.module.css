@@ -1,0 +1,16 @@
+.title { width: max-content; margin: 30px auto; }
+.searchBar { display: flex; align-items: center; justify-content: center; margin: 30px auto 5px; }
+.searchBar p { margin: 0; padding: 10px; background: #3b3b3b; color: #fff; border-radius: 5px 0 0 5px; font-size: .8em; }
+.searchInput { margin: 0; padding: 10px; width: 50vw; border: 1px solid #000; }
+.searchInput:focus { outline: none; }
+.subHeader { margin: 50px auto 10px; width: 60vw; font-weight: 400; }
+.searchButton { padding: 10px; min-width: max-content; border: 1px solid #3b3b3b; border-left: none; border-radius: 0 5px 5px 0; cursor: pointer; }
+.searchButton:hover { background: #444; color: #fff; transition: .15s ease all; }
+.searchButton:focus { outline: none; }
+.responseHeader { font-size: 18px; width: 90vw; margin: 40px auto -20px; }
+.buttonContainer { display: flex; justify-content: space-around; flex-wrap: wrap; font-size: .9em; margin: 2vh auto; max-width: 600px; }
+.buttonContainer button { cursor: pointer; border: none; padding: 4px 8px; border-radius: 2px; box-shadow: #ddd 1px 1px 5px 2px; }
+.buttonContainer button:active { transform: scale(.98); }
+.buttonContainer button:focus { outline: none; }
+.buttonContainer button:hover { margin-top: -1px; border-top: 1px inset rgb(121 180 115 / 40%); text-shadow: .05px .05px #000; }
+.dataDisplay { width: 90vw; max-height: 500px; margin: 30px auto; padding: 10px; text-overflow: ellipsis; box-shadow: 1px 1px 5px 2px #ddd; overflow: scroll; background: #fafafa; }

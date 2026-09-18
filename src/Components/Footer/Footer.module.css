@@ -1,0 +1,6 @@
+.footer { display: flex; justify-content: center; margin: 5% 2% 1%; border-top: 1px solid #7b7b7b; position: relative; }
+.textWrapper { display: flex; justify-content: space-evenly; width: 500px; }
+.icon { position: absolute; height: 30px; left: 1%; top: 20%; cursor: pointer; transition: ease-out 1s; }
+.icon:hover { fill: #487f5a; }
+@media (max-width: 600px) { .footer { justify-content: flex-end; } .textWrapper p { font-size: 0.7em; } }
+@media (max-width: 400px) { .textWrapper p { font-size: 0.6em; } }

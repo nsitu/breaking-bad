@@ -1,0 +1,16 @@
+.home { text-align: center; }
+.container { background: #fff; display: inline-block; margin-bottom: 30px; }
+.homeHeader { margin: 0; font-weight: 700; font-size: 56px; }
+.homeHeader mark { color: #487f5a; background: #fff; text-shadow: 1px 1px #000; }
+.subText { margin: 0; font-size: 16px; letter-spacing: 2px; text-align: right; }
+.styledText { font-size: 20px; font-weight: 700; margin: 0; }
+.styledSmallText { font-size: 18px; }
+.styledSmallText span { font-weight: bold; }
+.link { color: #396447; text-decoration: none; }
+.link:hover { text-decoration: underline; opacity: .7; transform: scale(1.02); }
+.iconContainer { width: max-content; margin-left: auto; margin-right: 20px; margin-top: -60px; }
+.icon { margin: 5px; cursor: pointer; }
+.primaryIcon { margin-bottom: 3px; border-bottom: 2px inset rgb(121 180 115 / 40%); }
+.icon:first-child { padding-bottom: 5px; }
+.button { border: 0; border-radius: 4px; padding: 8px 16px; font: inherit; cursor: pointer; background: #79b473; color: #fff; }
+@media (max-width: 680px) { .homeHeader { font-size: 32px; } .subText { font-size: 14px; } }
