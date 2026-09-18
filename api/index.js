@@ -28,6 +28,18 @@ const characters = () => withIds(data.characters).map((character) => ({
 const episodes = () => withIds(data.episodes).map((episode) => ({ ...episode, characters: asArray(episode.characters) }));
 const deaths = () => withIds(data.deaths).map((death) => ({ ...death, number_of_deaths: death.number_of_deaths == null ? 1 : death.number_of_deaths }));
 const quotes = () => withIds(data.quotes);
+const normalizeName = (value) => text(value).replace(/[^a-z0-9]/g, '');
+const characterForDeath = (death, allCharacters) => {
+  const deathName = normalizeName(death.death);
+  return allCharacters.find((character) => {
+    const characterName = normalizeName(character.name);
+    return characterName === deathName || deathName.includes(characterName) || characterName.includes(deathName);
+  });
+};
+const deathsWithCharacterData = (allCharacters) => deaths().map((death) => {
+  const character = characterForDeath(death, allCharacters);
+  return { ...death, img: character?.image_url || null, character: character || null };
+});
 const random = (items, count = 1) => [...items].sort(() => Math.random() - 0.5).slice(0, Math.max(Number.parseInt(count, 10) || 1, 1));
 const getPath = (req) => new URL(req.url || '/', 'http://localhost').pathname.replace(/^\/api\/?/, '').replace(/^\/+|\/+$/g, '').split('/').filter(Boolean);
 const send = (res, status, payload) => res.status(status).json(payload);
@@ -40,7 +52,7 @@ function handler(req, res) {
   const allCharacters = characters();
   const allEpisodes = episodes();
   const allQuotes = quotes();
-  const allDeaths = deaths();
+  const allDeaths = deathsWithCharacterData(allCharacters);
 
   if (!resource) return send(res, 200, { characters: '/api/characters', episodes: '/api/episodes', quotes: '/api/quotes', deaths: '/api/deaths' });
   if (resource === 'characters') {
