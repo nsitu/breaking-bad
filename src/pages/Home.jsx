@@ -57,12 +57,18 @@ const Home = () => {
   ));
 
   const death = (
-    <div className="death_info" key={rd.death_id}>
-      <div>
+    <article className={styles.deathInfo}>
+      <div className={styles.deathVisual}>
         <h2>{rd.death}</h2>
-        <img src={rd.img} alt={rd.death} />
+        {rd.img ? (
+          <img src={rd.img} alt={rd.death} onError={(event) => { event.currentTarget.style.display = 'none'; }} />
+        ) : (
+          <div className={styles.deathImagePlaceholder} aria-label={`No image available for ${rd.death}`}>
+            {rd.death?.charAt(0) || '?'}
+          </div>
+        )}
       </div>
-      <div>
+      <div className={styles.deathDetails}>
         <h4>Cause of death:</h4>
         <p>{rd.cause}</p>
         <h4>Responsible:</h4>
@@ -70,7 +76,7 @@ const Home = () => {
         <h4>Last words:</h4>
         <p>"{rd.last_words}"</p>
       </div>
-    </div>
+    </article>
   );
 
   return (
