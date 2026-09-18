@@ -11,7 +11,7 @@ const List = ({ children }) => <li className={styles.list}>{children}</li>;
 const About = () => (
   <main className={`${styles.container} ${styles.primary}`} role="main">
     <Title>
-      Say my <Highlight>N</Highlight>ame
+      Say my <mark className={styles.highlight}>N</mark>ame
     </Title>
     <div className={`${styles.container} ${styles.secondary}`}>
       <Title secondary>Who</Title>

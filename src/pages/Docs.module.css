@@ -21,4 +21,19 @@
 .schema > div:nth-of-type(1) { border-bottom: 1px solid #ececec; }
 .schemaLong { font-size: .85em; margin-top: 16px; display: flex; align-items: center; }
 #doc_mark { background: inherit; }
+
+:global(.docsMain) { overflow: scroll; overflow-x: hidden; width: 69vw; height: 100vh; display: flex; flex-direction: column; align-items: flex-start; color: #ececec; padding: 0 3% 2%; }
+:global(.docsMain div) { width: 100%; }
+:global(.docsMain h4), :global(.docsMain h3) { font-weight: bold; letter-spacing: 2px; text-align: left; padding-top: 10px; }
+:global(.docsMain h4) { color: #a0a0a0; font-size: 1.2em; }
+:global(.docsMain h3) { font-size: 1.5em; border-bottom: 1px solid grey; padding-bottom: 1%; }
+:global(.docsMain p) { text-align: left; }
+:global(.example) { padding: 1%; margin-left: 2%; background: #fff; color: #000; }
+:global(.code) { width: auto !important; }
+:global(.offset) { margin-left: 50px; }
+:global(.schema) { width: 100%; }
+:global(.schema > div) { display: flex; margin-left: 20px; width: calc(100% - 20px); }
+:global(.schema > div > p:nth-of-type(1)), :global(.schema > div > p:nth-of-type(2)) { width: 120px; }
+:global(.schema > div:nth-of-type(1)) { border-bottom: 1px solid #ececec; }
+:global(.schema_long) { font-size: .85em; margin-top: 16px; display: flex; align-items: center; }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Docs.module.css';
+import styles from './Docs.module.css';
 import DocsMain from '../Components/Docs/DocsMain';
 import navigation from '../data/navigation.json';
 
@@ -22,8 +22,8 @@ class Docs extends Component {
     });
 
     return (
-      <main className="documentation" role="main">
-      <aside className="navbar">
+        <main className={styles.documentation} role="main">
+      <aside className={styles.navbar}>
         {navMap}
         </aside>
         <DocsMain />

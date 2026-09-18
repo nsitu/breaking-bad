@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import styles from './DocsMain.module.css';
-import '../../pages/Docs.module.css';
+import pageStyles from '../../pages/Docs.module.css';
 import {
   characterExample,
   multipleCharacterExample,
@@ -56,7 +56,7 @@ class DocsMain extends Component {
       textDecoration: 'underline',
     };
     return (
-      <div ref={this.holderRef} className="docsMain">
+      <div ref={this.holderRef} className={pageStyles.docsMain}>
         <div id="doc">
           <h3>
             Document
